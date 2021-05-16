@@ -1,0 +1,14 @@
+{
+    "manifest_version":2,
+    "name": "oneClik",
+    "description":"All your links at one place",
+    "version":"1.0.0",
+    "icons":{"24":"icon_24.png"},
+    "browser_action":{
+        "default_icon":"icons_192.png",
+        "default_popup":"popup.html"
+    },
+
+    "options_page":"Settings.html",
+    "permissions":["storage"]
+}
