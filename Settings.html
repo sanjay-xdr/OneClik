@@ -25,6 +25,44 @@
             margin-top: 6px;
             color: rgb(175, 166, 166);
         }
+
+
+        .btn{
+            background-color: #C4B5FD
+            ;
+            color: rebeccapurple;
+            font-family: inherit;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        
+        }
+        
+        .btn:active{
+            transform: scale(0.89);
+        }
+        
+        
+        #toast{
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        
+        }
+        
+        .toast{
+            background-color: rebeccapurple;
+            color: white;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+        }
     </style>
 
 </head>
@@ -50,6 +88,7 @@
                         <div class="flex-grow">
                             <input id="github" placeholder="GitHub Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">GitHub</p>
                         </div>
                     </div>
@@ -65,6 +104,7 @@
                         <div class="flex-grow">
                             <input id="stackoverflow" placeholder="Stackoverflow Link"
                                 class="text-white title-font font-medium my_name">
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Stackoverflow</p>
                         </div>
                     </div>
@@ -80,6 +120,7 @@
                         <div class="flex-grow">
                             <input id="geeksforgeeks" placeholder="GeeksForGeeks Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">GeeksForGeeks</p>
                         </div>
                     </div>
@@ -95,6 +136,7 @@
                         <div class="flex-grow">
                             <input id="hackerrank" placeholder="Hackerrank Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Hackerrank</p>
                         </div>
                     </div>
@@ -110,6 +152,7 @@
                         <div class="flex-grow">
                             <input id="codepen" placeholder="CodePen Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">CodePen</p>
                         </div>
                     </div>
@@ -125,6 +168,7 @@
                         <div class="flex-grow">
                             <input id="hackerearth" placeholder="Hackerearth Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Hackerearth</p>
                         </div>
                     </div>
@@ -140,6 +184,7 @@
                         <div class="flex-grow">
                             <input id="codechef" placeholder="CodeChef Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">CodeChef</p>
                         </div>
                     </div>
@@ -155,6 +200,7 @@
                         <div class="flex-grow">
                             <input id="codeforces" placeholder="Codeforces Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Codeforces</p>
                         </div>
                     </div>
@@ -170,6 +216,7 @@
                         <div class="flex-grow">
                             <input id="codesandbox" placeholder="CodeSandbox Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">CodeSandbox</p>
                         </div>
                     </div>
@@ -185,6 +232,7 @@
                         <div class="flex-grow">
                             <input id="instagram" placeholder="Instagram Link"
                                 class="text-white title-font font-medium my_name">
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Instagram</p>
                         </div>
                     </div>
@@ -200,6 +248,7 @@
                         <div class="flex-grow">
                             <input id="facebook" placeholder="Facebook Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Facebook</p>
                         </div>
                     </div>
@@ -215,6 +264,7 @@
                         <div class="flex-grow">
                             <input id="twitter" placeholder="Twitter Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Twitter</p>
                         </div>
                     </div>
@@ -230,6 +280,7 @@
                         <div class="flex-grow">
                             <input id="linkedin" placeholder="LinkedIn Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">LinkedIn</p>
                         </div>
                     </div>
@@ -245,6 +296,7 @@
                         <div class="flex-grow">
                             <input id="youtube" placeholder="YouTube Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">YouTube</p>
                         </div>
                     </div>
@@ -260,6 +312,7 @@
                         <div class="flex-grow">
                             <input id="kaggle" placeholder="Kaggle Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Kaggle</p>
                         </div>
                     </div>
@@ -275,6 +328,7 @@
                         <div class="flex-grow">
                             <input id="leetcode" placeholder="LeetCode Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">LeetCode</p>
                         </div>
                     </div>
@@ -290,6 +344,7 @@
                         <div class="flex-grow">
                             <input id="netflix" placeholder="Netflix Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Netflix</p>
                         </div>
                     </div>
@@ -305,6 +360,7 @@
                         <div class="flex-grow">
                             <input id="prime_video" placeholder="Amazon Prime Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Amazon Prime</p>
                         </div>
                     </div>
@@ -320,6 +376,7 @@
                         <div class="flex-grow">
                             <input id="behance" placeholder="Behance Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Behance</p>
                         </div>
                     </div>
@@ -335,6 +392,7 @@
                         <div class="flex-grow">
                             <input id="discord" placeholder="Discord Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Discord</p>
                         </div>
                     </div>
@@ -350,6 +408,7 @@
                         <div class="flex-grow">
                             <input id="extra" placeholder="Extra/Others Link"
                                 class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
                             <p class="text-gray-600 my_val">Extra/Others</p>
                         </div>
                     </div>
@@ -357,6 +416,10 @@
             </div>
         </div>
     </section>
+
+    <div id="toast">
+
+    </div>
 
 
 <script src="Settings.js"></script>
