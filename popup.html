@@ -53,10 +53,12 @@
       }
 
       .modal-content {
+        height: 20px;
         padding: 0 22px;
       }
 
       .modal-icons {
+        
         border-top: 0.5px solid #dadada;
         height: 50px;
         width: 100%;
@@ -78,14 +80,15 @@
 
       .flex-container {
         display: flex;
-        justify-content: space-between;
-        padding: 10px 22px;
+        flex-wrap: wrap;
+        height: 145px;
+        align-content: space-between;
       }
 
       .flex {
         opacity: 1;
         transition: opacity 0.2s ease-in-out;
-        width: 120px;
+        width: 75px;
       }
 
       .flex:hover {
@@ -96,19 +99,23 @@
         font-size: 40px;
         color: #2f5876;
       }
+
+      a{
+        padding: 5px;
+      }
     </style>
     <script src="popup.js"></script>
   </head>
 
   <body>
 
-    <!-- this is where we will place out logo -->
-    <!-- <div class="modal-header">
+    <!-- this is where we will place out logo --> 
+   <div class="modal-header">
       <h1 class="logo">
-        <img class="logo-icon" src="images/traversy-logo.png" />Connect Me
+        <img class="logo-icon" src="" />OneClik
         <span class="version">(1.0.0)</span>
       </h1>
-    </div> -->
+    </div>
 
     <div class="modal-content">
       <p>Jump to your Favourite site in One Click </p>
@@ -116,6 +123,71 @@
 
     <div class="modal-icons">
       <div class="flex-container">
+
+
+      <div class="flex">
+          <a href="#" target="_blank">
+            <img alt="YouTube image"
+            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+            src="https://img.icons8.com/color/2x/fa314a/youtube-play.png">
+          </a>
+      </div>
+
+
+
+      <div class="flex">
+        <a href="#" target="_blank">
+          <img alt="Instagram image"
+          class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+          src="https://img.icons8.com/fluent/2x/instagram-new.png">
+        </a>
+    </div>
+
+ 
+
+
+
+    <div class="flex">
+      <a href="#" target="_blank">
+        <img alt="Twitter image"
+        class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+        src="https://img.icons8.com/fluent/2x/twitter.png">
+      </a>
+  </div>
+
+
+
+
+
+  <div class="flex">
+    <a href="#" target="_blank">
+      <img alt="LinkedIn image"
+      class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+      src="https://img.icons8.com/fluent/2x/linkedin.png">
+    </a>
+</div>
+
+
+<div class="flex">
+  <a href="#" target="_blank">
+    <img alt="Netflix image"
+    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+    src="https://cdn.icon-icons.com/icons2/2657/PNG/256/netflix_icon_161073.png">
+  </a>
+</div>
+
+
+<div class="flex">
+  <a href="#" target="_blank">
+    <img alt="Prime Video image"
+    class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+    src="https://img.icons8.com/color/2x/amazon-prime-video.png">
+  </a>
+</div>
+
+
+
+
 
 
         <div class="flex">
@@ -128,7 +200,7 @@
 
 
         <div class="flex">
-            <a href="#" target="_blank">
+            <a href="#" target="_blank" id="stackoverflow">
                 <img alt="Stackoverflow image"
                 class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
                 src="https://img.icons8.com/color/2x/stackoverflow.png">
@@ -146,18 +218,18 @@
 
         <div class="flex">
             <a href="#" target="_blank">
-                <img alt="Hackerrank image"
-                class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                src="https://img.icons8.com/windows/2x/hackerrank.png">
+              <img alt="Others image"
+              class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+              src="https://codeforces-upsolving-helper.herokuapp.com/static/images/codeforces-icon.png">
             </a>
         </div>
 
 
         <div class="flex">
             <a href="#" target="_blank">
-                <img alt="CodePen image"
-                class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
-                src="https://img.icons8.com/ios-filled/2x/codepen.png" alt="COdepen">
+              <img alt="Leetcode image"
+              class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+              src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/83facdeba5b924cb3b1a">
             </a>
         </div>
 
@@ -169,6 +241,67 @@
                 src="https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png">
             </a>
         </div>
+
+
+        <div class="flex">
+          <a href="#" target="_blank">
+            <img alt="Others image"
+            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+            src="https://www.stopstalk.com/stopstalk/static/images/codechef_logo.png">
+          </a>
+      </div>
+
+
+
+      <div class="flex">
+        <a href="#" target="_blank">
+          <img alt="Facebook image"
+          class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+          src="https://img.icons8.com/fluent/2x/facebook-new.png">
+        </a>
+    </div>
+
+
+
+    <div class="flex">
+      <a href="#" target="_blank">
+        <img alt="Discord image"
+        class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+        src="https://img.icons8.com/fluent/2x/discord-logo.png">
+      </a>
+  </div>
+
+
+  <div class="flex">
+    <a href="#" target="_blank">
+      <img alt="Others image"
+      class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+      src="https://img.icons8.com/fluent/2x/extra-features.png">
+    </a>
+</div>
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
       </div>

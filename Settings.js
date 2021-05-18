@@ -1,16 +1,10 @@
-const github =document.getElementById('github');
+const github = document.getElementById("github");
+const stackoverflow = document.getElementById("stackoverflow");
 
+github.addEventListener("keyup", function () {
+  chrome.storage.sync.set({ github: github.value }, function () {});
+});
 
-
-
-
-
-github.addEventListener('keyup',function(){
-    
-    chrome.storage.sync.set({key: github.value}, function() {
-        console.log('Value is set to '+ github.value);
-      });
-
-
-
-})
+stackoverflow.addEventListener("keyup", function () {
+  chrome.storage.sync.set({ stackoverflow: stackoverflow.value }, function () {});
+});

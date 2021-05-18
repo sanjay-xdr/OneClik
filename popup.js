@@ -1,10 +1,13 @@
-var github=document.getElementById('github');
+// var github = document.getElementById("github");
+
+// var stackoverflow = document.getElementById("stackoverflow");
 
 
-chrome.storage.sync.set({key: github.value}, function() {
-    console.log('Value is set to '+ github.value);
-  });
 
-chrome.storage.sync.get(['key'], function(result) {
-    github.href=result.key
-  });
+// chrome.storage.sync.get(["github"], function (result) {
+//   github.href = result.github;
+// });
+
+// chrome.storage.sync.get(["stackoverflow"], function (result) {
+//   stackoverflow.href = result.stackoverflow;
+// });
