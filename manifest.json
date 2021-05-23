@@ -1,7 +1,7 @@
 {
     "manifest_version":2,
     "name": "OneClik",
-    "description":"All your links at one place",
+    "description":"All your most visited and favourite links at one place.",
     "version":"1.0.0",
         "icons":{
         "128":"icon128.png",
