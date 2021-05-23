@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icon  -->
+
+
+    <title>OneClik</title>
+
+    <!-- Small style -->
+    <style>
+        .my_name {
+            border: none;
+            color: black;
+            padding-left: 9px;
+            padding: 6px;
+        }
+
+        .my_val {
+            margin-top: 6px;
+            color: rgb(175, 166, 166);
+        }
+
+
+        .btn {
+            background-color: #b4a4f8;
+            color: rebeccapurple;
+            font-family: inherit;
+            font-weight: bold;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: #d7d1ee;
+            color: rgb(56, 56, 56);
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+
+        .btn:active {
+
+            transform: scale(0.89);
+        }
+
+
+        #toast {
+            position: fixed;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+        .toast {
+            background-color: rebeccapurple;
+            color: white;
+            border-radius: 5px;
+            padding: 1rem 2rem;
+            margin: 0.5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+            <div class="flex flex-col text-center w-full mb-20">
+                <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">OneClik</h1>
+                <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Configure/Add your most visited sites here.
+                </p>
+            </div>
+
+            <div class="flex flex-wrap -m-2">
+
+                <!-- Github -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="GitHub image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/github.png">
+                        <div class="flex-grow">
+                            <input id="github" placeholder="GitHub Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">GitHub</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- StackOverFlow -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Stackoverflow image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/color/2x/stackoverflow.png">
+                        <div class="flex-grow">
+                            <input id="stackoverflow" placeholder="Stackoverflow Link"
+                                class="text-white title-font font-medium my_name">
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Stackoverflow</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GeeksForGeeks -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="GeeksForGeeks image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/color/2x/GeeksforGeeks.png">
+                        <div class="flex-grow">
+                            <input id="geeksforgeeks" placeholder="GeeksForGeeks Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">GeeksForGeeks</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Internshala -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Internshala image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://th.bing.com/th/id/OIP.h1FUGJybDZdKgc8QQ3mm-wHaD4?pid=ImgDet&rs=1">
+                        <div class="flex-grow">
+                            <input id="internshala" placeholder="Internshala Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Internshala</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coursera -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Coursera image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://th.bing.com/th/id/OIP.GGnHDg9utefgOgNhYbbqtQHaHa?pid=ImgDet&rs=1">
+                        <div class="flex-grow">
+                            <input id="coursera" placeholder="Coursera Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Coursera</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Udemy -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Udemy image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://cdn.icon-icons.com/icons2/2699/PNG/128/udemy_logo_icon_168372.png">
+                        <div class="flex-grow">
+                            <input id="udemy" placeholder="Udemy Link" class="text-white title-font font-medium my_name"
+                                value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Udemy</p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Hackerrank -->
+
+                <!-- <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Hackerrank image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/windows/2x/hackerrank.png">
+                        <div class="flex-grow">
+                            <input id="hackerrank" placeholder="Hackerrank Link"
+                                class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Hackerrank</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- CodePen -->
+
+                <!-- <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="CodePen image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/ios-filled/2x/codepen.png">
+                        <div class="flex-grow">
+                            <input id="codepen" placeholder="CodePen Link"
+                                class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">CodePen</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Hackerearth -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Hackerearth image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png">
+                        <div class="flex-grow">
+                            <input id="hackerearth" placeholder="Hackerearth Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Hackerearth</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodeChef -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Others image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://www.stopstalk.com/stopstalk/static/images/codechef_logo.png">
+                        <div class="flex-grow">
+                            <input id="codechef" placeholder="CodeChef Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">CodeChef</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Codeforces -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Others image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://codeforces-upsolving-helper.herokuapp.com/static/images/codeforces-icon.png">
+                        <div class="flex-grow">
+                            <input id="codeforces" placeholder="Codeforces Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Codeforces</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CodeSandbox -->
+
+                <!-- <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Others image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/p0qpv43evjf7ir9o1ixr">
+                        <div class="flex-grow">
+                            <input id="codesandbox" placeholder="CodeSandbox Link"
+                                class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">CodeSandbox</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Instagram -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Instagram image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/instagram-new.png">
+                        <div class="flex-grow">
+                            <input id="instagram" placeholder="Instagram Link"
+                                class="text-white title-font font-medium my_name">
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Instagram</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facebook -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Facebook image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/facebook-new.png">
+                        <div class="flex-grow">
+                            <input id="facebook" placeholder="Facebook Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Facebook</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Twitter -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Twitter image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/twitter.png">
+                        <div class="flex-grow">
+                            <input id="twitter" placeholder="Twitter Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Twitter</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- LinkedIn -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="LinkedIn image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/linkedin.png">
+                        <div class="flex-grow">
+                            <input id="linkedin" placeholder="LinkedIn Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">LinkedIn</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- YouTube -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="YouTube image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/color/2x/fa314a/youtube-play.png">
+                        <div class="flex-grow">
+                            <input id="youtube" placeholder="YouTube Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">YouTube</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- kaggle -->
+
+                <!-- <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="kaggle image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/windows/2x/kaggle.png">
+                        <div class="flex-grow">
+                            <input id="kaggle" placeholder="Kaggle Link"
+                                class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Kaggle</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Leetcode -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Leetcode image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_170,w_170,f_auto,b_white,q_auto:eco/83facdeba5b924cb3b1a">
+                        <div class="flex-grow">
+                            <input id="leetcode" placeholder="LeetCode Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">LeetCode</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Netflix -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Netflix image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://cdn.icon-icons.com/icons2/2657/PNG/256/netflix_icon_161073.png">
+                        <div class="flex-grow">
+                            <input id="netflix" placeholder="Netflix Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Netflix</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Prime Video -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Prime Video image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/color/2x/amazon-prime-video.png">
+                        <div class="flex-grow">
+                            <input id="prime_video" placeholder="Amazon Prime Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Amazon Prime</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Behance -->
+
+                <!-- <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Behance image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/color/2x/behance.png">
+                        <div class="flex-grow">
+                            <input id="behance" placeholder="Behance Link"
+                                class="text-white title-font font-medium my_name" value>
+                                <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Behance</p>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Discord -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Discord image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/discord-logo.png">
+                        <div class="flex-grow">
+                            <input id="discord" placeholder="Discord Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Discord</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Extra/Others -->
+
+                <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+                    <div class="h-full flex items-center border-gray-800 border p-4 rounded-lg">
+                        <img alt="Others image"
+                            class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4"
+                            src="https://img.icons8.com/fluent/2x/extra-features.png">
+                        <div class="flex-grow">
+                            <input id="extra" placeholder="Extra/Others Link"
+                                class="text-white title-font font-medium my_name" value>
+                            <button class="btn" id="button">Set</button>
+                            <p class="text-gray-600 my_val">Extra/Others</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="toast">
+
+    </div>
+
+
+    <script src="Settings.js"></script>
+</body>
+
+</html>
